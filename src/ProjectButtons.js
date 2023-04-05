@@ -130,12 +130,13 @@ const ImageMarked = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
-
-
 class ProjectButtons extends Component{
   constructor(props) {
     super(props);
     this.player = React.createRef();
+    this.state = {
+      playing: false
+    };
   }
 
   render (){
@@ -147,13 +148,13 @@ class ProjectButtons extends Component{
             ref = {this.player}
             url='https://player.vimeo.com/video/814797483?h=0c1bb9be1e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
             className='react-player'
-            playing
+            playing={this.state.playing}
             controls
             width="100%"
             height="100%"
             playsinline='true'
           />
-          </div>
+    </div>
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
         <ImageButton
@@ -162,7 +163,11 @@ class ProjectButtons extends Component{
           style={{
             width: image.width,
           }}
-          onClick={() => this.player.current.seekTo(image.time)}
+          onClick={() => {
+            window. scrollTo(0,0);
+            this.player.current.seekTo(image.time);
+            this.setState({ playing: true })
+          }}
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
