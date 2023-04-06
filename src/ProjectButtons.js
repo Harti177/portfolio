@@ -11,39 +11,39 @@ const images = [
   {
     url: 'https://drive.google.com/uc?export=download&id=1RBngVf-qfQtJyd1QmgjaeqSIBYqgyvyt',
     title: 'Factory Planning',
-    width: '50%',
+    width: '25%',
     time: 0
   },
   {
     url: 'https://drive.google.com/uc?export=download&id=1S575HOFOYw4Q9n-9OrJxH2uwpoJZ6d_g',
     title: 'Social VR',
-    width: '50%',
+    width: '25%',
     time: 29.75
   },
 
   {
     url: 'https://drive.google.com/uc?export=download&id=1ZmlQ-7CHepv4K6cxEhN-jx8NxYEyw2_n',
     title: 'Immersive Learning Campus',
-    width: '30%',
+    width: '25%',
     time: 50.2
   },
   {
     url: 'https://drive.google.com/uc?export=download&id=1HzjCRVm-jDE0eYwVfLB0p8wC352HACEw',
     title: 'Collaborative Surgery Training',
-    width: '40%',
+    width: '25%',
     time: 84.5
   },
   {
     url: 'https://drive.google.com/uc?export=download&id=1MRY0gAPARnTvitZVA3zcxg1jaNoABuSt',
     title: 'Handsfree Manual(Doc) Reader',
-    width: '30%',
+    width: '20%',
     time: 107
   },
 
   {
     url: 'https://drive.google.com/uc?export=download&id=1PTJBA5aT7qcuUqN5sDDSXanCsqRG1i2I',
     title: 'Game Assistant Using ChatGPT',
-    width: '30%',
+    width: '20%',
     time: 120.50
   },
   {
@@ -55,7 +55,7 @@ const images = [
   {
     url: 'https://drive.google.com/uc?export=download&id=1LuoI4C_wGZlRPDWHdcLq2YycrwTJU_RN',
     title: 'Urban Planner',
-    width: '30%',
+    width: '20%',
     time: 127
   },
   {
@@ -68,7 +68,7 @@ const images = [
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 300,
+  height: 200,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 100,
@@ -143,19 +143,7 @@ class ProjectButtons extends Component{
 
   return (
     <div> 
-     <div className="player-wrapper">
-      <ReactPlayer
-            ref = {this.player}
-            url='https://player.vimeo.com/video/814797483?h=0c1bb9be1e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-            className='react-player'
-            playing={this.state.playing}
-            controls
-            width="100%"
-            height="100%"
-            playsinline='true'
-          />
-    </div>
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
         <ImageButton
           focusRipple
@@ -164,7 +152,7 @@ class ProjectButtons extends Component{
             width: image.width,
           }}
           onClick={() => {
-            window. scrollTo(0,0);
+            window. scrollTo(0,1600);
             this.player.current.seekTo(image.time);
             this.setState({ playing: true })
           }}
@@ -190,6 +178,18 @@ class ProjectButtons extends Component{
         </ImageButton>
       ))}
     </Box>
+     <div className="player-wrapper">
+      <ReactPlayer
+            ref = {this.player}
+            url='https://player.vimeo.com/video/814797483?h=0c1bb9be1e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+            className='react-player'
+            playing={this.state.playing}
+            controls
+            width="100%"
+            height="100%"
+            playsinline='true'
+          />
+    </div>
     </div>
   );
 }

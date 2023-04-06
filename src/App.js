@@ -4,13 +4,15 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import ProjectButtons from './ProjectButtons';
-
 import { createTheme } from '@mui/material/styles';
+import Home from './Home';
+import { Typography } from '@mui/material';
+import './styles.css';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#424242',
+      main: '#000000',
       contrastText: '#fff',
     },
     secondary: {
@@ -26,13 +28,15 @@ class App extends Component {
       <div>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar theme={theme} position="static" color="primary">
-            <Toolbar>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">Resume</Button>
-              <Button color="inherit">Portfolio</Button>
+            <Toolbar sx={{justifyContent:'right' }}>
+             <button onClick={() => {
+              window.open("https://drive.google.com/file/d/1Z6JV9EWSBAkzMhDINB3-cDqw1sS2hUXJ/view");
+            }}
+              className='socailmediabtn'>Resume</button>
             </Toolbar>
           </AppBar>
         </Box>
+        <Home />
         <ProjectButtons />
       </div>
     );
