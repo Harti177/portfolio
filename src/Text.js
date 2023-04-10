@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css';
+import './Home.css';
 import Typewriter from "typewriter-effect";
 
 function Text() {

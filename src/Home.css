@@ -1,0 +1,84 @@
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.Typewriter__wrapper {
+  font-size: 2.0em !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+}
+.Typewriter__cursor {
+  font-size: 2.4em !important;
+  color: #ffffff !important;
+}
+.headtext {
+  padding-top: 0px;
+  font-size: 2.4em !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+}
+.nametext {
+  font-size: 2.0em !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+}
+.socailmediabtn {
+  margin-top: 2rem;
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+}
+.socailmediabtn:hover {
+  background-color: #ffffff;
+  box-shadow: rgba(1, 1, 1, 0.35) 0px 5px 15px !important;
+  opacity: 0.6;
+}
+.resumebutton {
+  margin-top: 2rem;
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+}
+.resumebutton:hover {
+  background-color: #ffffff;
+  box-shadow: rgba(1, 1, 1, 0.35) 0px 5px 15px !important;
+  opacity: 0.6;
+}
+.icon {
+  font-size: 30px;
+}
