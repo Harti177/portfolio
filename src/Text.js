@@ -8,7 +8,7 @@ function Text() {
       options={{
         strings: [
           "Unity Developer",
-          "Specialized in XR/VR"
+          "Specialized in XR"
         ],
         autoStart: true,
         loop: true,

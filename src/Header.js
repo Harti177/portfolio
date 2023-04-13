@@ -25,7 +25,7 @@ class Header extends Component {
           <AppBar theme={theme} position="static" color="primary">
             <Toolbar sx={{justifyContent:'right' }}>
              <button onClick={() => {
-              window.open("https://drive.google.com/file/d/1Z6JV9EWSBAkzMhDINB3-cDqw1sS2hUXJ/view");
+              window.open("https://drive.google.com/file/d/1QMTmvpH1vHQVmHPPNvXVg3RxCGvKGNPT/view");
             }}
               className='socailmediabtn'>Resume</button>
             </Toolbar>

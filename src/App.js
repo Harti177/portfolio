@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ProjectButtons from './ProjectButtons';
 import Home from './Home';
 import Header from './Header';
+import Example from './CaroselTest';
+import ProjectDetails from './ProjectDetails';
 
 class App extends Component {
   render() {
@@ -9,7 +11,7 @@ class App extends Component {
       <div>
         <Header />
         <Home />
-        <ProjectButtons />
+        <ProjectDetails />
       </div>
     );
   }
