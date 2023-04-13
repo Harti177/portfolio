@@ -11,16 +11,13 @@ import ProjectThumbnails from './ProjectThumbnails';
 function Home() {
   return (
     <Carousel
-      next={ (next, active) => console.log(`we left ${active}, and are now at ${next}`) }
-      prev={ (prev, active) => console.log(`we left ${active}, and are now at ${prev}`) }
-      navButtonsAlwaysVisible="true"
       autoPlay="false"
+      navButtonsAlwaysVisible="true"
       indicatorContainerProps={{
         style: {
           backgroundColor:'#000',
           marginTop:'0px'
         }
-
     }}
     >
       <Paper>
